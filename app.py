@@ -23,7 +23,7 @@ model, scaler = load_model()
 
 st.set_page_config(
     page_title="Boston House Pricing",
-    page_icon=':house',
+    page_icon='icon.png',
     layout='wide',
     initial_sidebar_state="expanded"
 )
