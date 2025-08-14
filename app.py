@@ -113,8 +113,9 @@ if st.sidebar.button('Predict House Price'):
         time.sleep(4)
         scaler.fit(input_df)
         # scaled_input = scaler.transform(input_df)
-        prediction = model.predict(input_df) 
-        predicted_price = prediction[0] * 1000
+        prediction = model.predict(input_df)
+        import math 
+        predicted_price = math.ceil(prediction[0] * 1000)
 
     st.markdown(f'<div class="prediction-result">Predicted house price: ${predicted_price}</div>,', unsafe_allow_html=True)
     
